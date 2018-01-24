@@ -4,6 +4,8 @@
 /dist
 /tmp
 
+/.idea
+
 # dependencies
 /node_modules
 /bower_components
