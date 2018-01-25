@@ -12,25 +12,25 @@ test('it exists', function(assert) {
 });
 
 test('it has an attribute: title', function(assert) {
-  var model = this.subject();
-  var hasAttr = Object.keys(model.toJSON()).indexOf('title') > -1;
+  let model = this.subject();
+  let hasAttr = Object.keys(model.toJSON()).indexOf('title') > -1;
   assert.ok(hasAttr);
 });
 
 test('it has an attribute: description', function(assert) {
-  var model = this.subject();
-  var hasAttr = Object.keys(model.toJSON()).indexOf('description') > -1;
+  let model = this.subject();
+  let hasAttr = Object.keys(model.toJSON()).indexOf('description') > -1;
   assert.ok(hasAttr);
 });
 
 test('it has an attribute: priority', function(assert) {
-  var model = this.subject();
-  var hasAttr = Object.keys(model.toJSON()).indexOf('priority') > -1;
+  let model = this.subject();
+  let hasAttr = Object.keys(model.toJSON()).indexOf('priority') > -1;
   assert.ok(hasAttr);
 });
 
 test('it has an attribute: isCompleted', function(assert) {
-  var model = this.subject();
-  var hasAttr = Object.keys(model.toJSON()).indexOf('isCompleted') > -1;
+  let model = this.subject();
+  let hasAttr = Object.keys(model.toJSON()).indexOf('isCompleted') > -1;
   assert.ok(hasAttr);
 });
