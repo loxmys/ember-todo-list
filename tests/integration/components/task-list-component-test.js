@@ -1,10 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import { inject as service } from '@ember/service';
-// import { run } from '@ember/runloop';
 moduleForComponent('task-list-component', 'Integration | Component | task list component', {
   integration: true,
-  store: service('store'),
 });
 
 test('it renders all tasks', function(assert) {
@@ -89,5 +86,4 @@ test('it renders task major priority style', function(assert) {
   this.render(hbs`{{task-list-component task-list=task-list}}`);
   assert.equal(this.$('tbody tr:first').hasClass('major'), true);
 });
-
 
