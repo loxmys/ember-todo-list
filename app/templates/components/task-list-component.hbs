@@ -1,4 +1,4 @@
-<div class="task-list">
+<div class="task-list ">
   <table>
     <thead>
     <tr>
@@ -31,6 +31,9 @@
     {{/each}}
     </tbody>
   </table>
+  <div class="text-center">
+    {{#link-to 'tasks.new'}} <button type="button" class="success button">Add</button> {{/link-to}}
+  </div>
   {{yield}}
 </div>
 
