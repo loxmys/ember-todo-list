@@ -1,3 +1,54 @@
 @import "settings";
 @import 'foundation-sites/foundation';
 @include foundation-everything;
+@include foundation-flex-grid;
+
+
+.task-list{
+
+  height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  table{
+    table-layout: fixed;
+    //box-sizing: border-box ;
+    tbody th, tbody td{
+      padding: 10px;
+    }
+    .button{
+      margin-bottom: 0px;
+      min-width: 60px;
+      box-sizing: border-box;
+    }
+  }
+
+  .td-dropdown{
+    cursor: pointer;
+    .td-dropdown-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .dropdown-pane.is-open{
+      word-break: break-all;
+    }
+  }
+
+  .relative{
+    position: relative;
+  }
+  .minor{
+    background-color: rgba(0, 255, 0, 0.55);
+  }
+  .major{
+    background-color: rgba(255, 255, 0, 0.61);
+  }
+  .critical{
+    background-color: rgba(255, 0, 0, 0.6);
+  }
+  .task-comleted{
+    text-decoration: line-through;
+  }
+
+}
