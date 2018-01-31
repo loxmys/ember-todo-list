@@ -5,19 +5,13 @@ export default Component.extend({
   store: service('store'),
   actions: {
     deleteTask: function (id) {
-      this.get('store').findRecord('task', id, { backgroundReload: false }).then(function(task) {
-        task.destroyRecord();
-      });
+      this.sendAction('deleteTask', id);zxczcx
     },
     closeTask: function (id) {
-      this.get('store').findRecord('task', id).then(function(data) {
-        data.set('isCompleted', true);
-      });
+      this.sendAction('closeTask', id);
     },
     reopenTask: function (id) {
-      this.get('store').findRecord('task', id).then(function(data) {
-        data.set('isCompleted', false);
-      });
+      this.sendAction('reopenTask', id);
     },
     dropDownClick: function () {
       let element = $(event.target);
