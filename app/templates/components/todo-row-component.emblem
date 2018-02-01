@@ -1,0 +1,19 @@
+tr class="{{task.priority}}"
+  td class="{{if task.isCompleted 'task-comleted' ''}}"
+    =task.title
+  td click="dropDownClick" class="relative td-dropdown {{if task.isCompleted 'task-comleted' ''}}"
+    div.td-dropdown-text
+      =task.description
+      div class="dropdown-pane {{if dropDownOpened 'is-open' ''}}"
+          =task.description
+  td.text-right
+    if task.isCompleted
+      button.success.button.tiny click="'reopenTask' task.id"  Reopen
+    else
+      button.button.tiny click="'closeTask' task.id"  Close
+    button.alert.button.tiny click="'deleteTask' task.id"  Delete
+
+
+
+
+
