@@ -9,25 +9,7 @@
     </thead>
     <tbody>
     {{#each task-list as |task|}}
-      <tr class="{{task.priority}}">
-        <td class="{{if task.isCompleted "task-comleted" ""}}">
-          {{task.title}}
-        </td>
-        <td {{action "dropDownClick" on click }} class="relative td-dropdown {{if task.isCompleted "task-comleted" ""}}">
-          <div class="td-dropdown-text">{{task.description}}</div>
-          <div class="dropdown-pane">
-            {{task.description}}
-          </div>
-        </td>
-        <td class="text-right">
-          {{#if task.isCompleted}}
-            <button {{action "reopenTask" task.id}} type="button" class="success button tiny">Reopen</button>
-          {{else}}
-            <button {{action "closeTask" task.id}} type="button" class="button tiny">Close</button>
-          {{/if}}
-          <button {{action "deleteTask" task.id}} type="button" class="alert  button tiny">Delete</button>
-        </td>
-      </tr>
+      {{#todo-row-component task=task}}{{/todo-row-component}}
     {{/each}}
     </tbody>
   </table>
