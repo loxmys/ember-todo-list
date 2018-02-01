@@ -50,7 +50,7 @@ describe('Unit | Component | todo row component', function() {
     let component = this.subject();
     this.render();
     expect(component.get('dropDownOpened')).to.equal(false);
-    let data = component.actions.dropDownClick.call(component);
+    component.actions.dropDownClick.call(component);
     expect(component.get('dropDownOpened')).to.equal(true);
   });
 
